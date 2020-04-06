@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drivers Training Management System", "Drivers Training Management System\Drivers Training Management System.csproj", "{FEF17FF9-B5D9-4975-8237-6316EDD354E0}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Drivers Information Management System - Admin", "Drivers Information Management System - Admin\Drivers Information Management System - Admin.wixproj", "{DED6F005-374C-40AB-AB80-6C60BF27BAB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		CD_ROM|x86 = CD_ROM|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		DVD-5|Any CPU = DVD-5|Any CPU
+		DVD-5|x86 = DVD-5|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|x86 = SingleImage|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.CD_ROM|x86.ActiveCfg = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.CD_ROM|x86.Build.0 = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.DVD-5|x86.ActiveCfg = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.DVD-5|x86.Build.0 = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.Release|x86.Build.0 = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.SingleImage|x86.ActiveCfg = Debug|Any CPU
+		{FEF17FF9-B5D9-4975-8237-6316EDD354E0}.SingleImage|x86.Build.0 = Debug|Any CPU
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.CD_ROM|Any CPU.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.CD_ROM|Any CPU.Build.0 = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.CD_ROM|x86.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.CD_ROM|x86.Build.0 = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.Debug|x86.ActiveCfg = Debug|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.Debug|x86.Build.0 = Debug|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.DVD-5|Any CPU.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.DVD-5|Any CPU.Build.0 = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.DVD-5|x86.ActiveCfg = Debug|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.DVD-5|x86.Build.0 = Debug|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.Release|Any CPU.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.Release|x86.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.Release|x86.Build.0 = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.SingleImage|Any CPU.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.SingleImage|Any CPU.Build.0 = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.SingleImage|x86.ActiveCfg = Release|x86
+		{DED6F005-374C-40AB-AB80-6C60BF27BAB2}.SingleImage|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5568511A-A5E5-45CD-A4A9-037FF37693A2}
+	EndGlobalSection
+EndGlobal

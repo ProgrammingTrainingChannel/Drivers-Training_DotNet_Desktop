@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DriversTrainingManagementSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblChoices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+    <Property Name="ChoicePicture" Type="image" />
+    <Property Name="ChoiceTextOromiffa" Type="nvarchar" MaxLength="2500" />
+    <Property Name="ChoiceTextAmharic" Type="nvarchar" MaxLength="2500" />
+    <Property Name="IsAnswer" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblEducationStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblExpense">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PaymentDate" Type="date" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="PaidBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecievedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblExpenseReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLicenseRank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMark">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TraineeID" Type="int" Nullable="false" />
+    <Property Name="ExamRound" Type="int" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+    <Property Name="Mark" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPaperMark">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TraineeID" Type="int" Nullable="false" />
+    <Property Name="TrainerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExamRound" Type="int" Nullable="false" />
+    <Property Name="QuestionAmount" Type="int" Nullable="false" />
+    <Property Name="Mark" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPaymentReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblQuestion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="QuestionType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="QuestionPicture" Type="image" />
+    <Property Name="QuestionTextAmharic" Type="nvarchar" MaxLength="2500" />
+    <Property Name="QuestionTextOromiffa" Type="nvarchar" MaxLength="2500" />
+  </EntityType>
+  <EntityType Name="tblQuestionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Level" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LicenseCategrory" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTrainee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="RegistrationDate" Type="date" Nullable="false" />
+    <Property Name="Ketema" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Woreda" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Kebele" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HouseNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="EducationStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CitizenShip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TraineePhoto" Type="varbinary(max)" />
+    <Property Name="TrainingRound" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicenseCategory" Type="int" />
+    <Property Name="TotalPayment" Type="money" />
+    <Property Name="CurrentPayment" Type="money" />
+    <Property Name="Remark" Type="ntext" />
+  </EntityType>
+  <EntityType Name="tblTraineeDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TraineeID" Type="int" Nullable="false" />
+    <Property Name="TrainingType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TrainingBatch" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LicenseRank" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EvaluationDate" Type="date" Nullable="false" />
+    <Property Name="ClassStartDate" Type="date" Nullable="false" />
+    <Property Name="ClassEndDate" Type="date" Nullable="false" />
+    <Property Name="Section" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TrainerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AmountToPay" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTraineePayment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TraineeID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PaymentDate" Type="date" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="RecievedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTrainer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTrainingType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DriversTrainingManagementSystemDB.dbo.View_EvaluationReport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_EvaluationReport">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Fullname" />
+      <PropertyRef Name="ExamRound" />
+      <PropertyRef Name="Age" />
+      <PropertyRef Name="Sex" />
+      <PropertyRef Name="RegistrationDate" />
+      <PropertyRef Name="Ketema" />
+      <PropertyRef Name="Woreda" />
+      <PropertyRef Name="Kebele" />
+      <PropertyRef Name="HouseNo" />
+      <PropertyRef Name="PhoneNumber" />
+      <PropertyRef Name="EducationStatus" />
+      <PropertyRef Name="CitizenShip" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ExamRound" Type="int" Nullable="false" />
+    <Property Name="TotalQuestions" Type="int" />
+    <Property Name="TotalMark" Type="int" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="RegistrationDate" Type="date" Nullable="false" />
+    <Property Name="Ketema" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Woreda" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Kebele" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HouseNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="EducationStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CitizenShip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TraineePhoto" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DriversTrainingManagementSystemDB.dbo.View_GradeReport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_GradeReport">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Fullname" />
+      <PropertyRef Name="Age" />
+      <PropertyRef Name="Sex" />
+      <PropertyRef Name="RegistrationDate" />
+      <PropertyRef Name="PhoneNumber" />
+      <PropertyRef Name="ExamRound" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="RegistrationDate" Type="date" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="ExamRound" Type="int" Nullable="false" />
+    <Property Name="TotalMark" Type="int" />
+    <Property Name="TraineePhoto" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DriversTrainingManagementSystemDB.dbo.View_Trainee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_Trainee">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Fullname" />
+      <PropertyRef Name="PhoneNumber" />
+      <PropertyRef Name="Age" />
+      <PropertyRef Name="RegistrationDate" />
+      <PropertyRef Name="Sex" />
+      <PropertyRef Name="Ketema" />
+      <PropertyRef Name="Woreda" />
+      <PropertyRef Name="Kebele" />
+      <PropertyRef Name="HouseNo" />
+      <PropertyRef Name="EducationStatus" />
+      <PropertyRef Name="CitizenShip" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="RegistrationDate" Type="date" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="Ketema" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Woreda" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Kebele" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HouseNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EducationStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CitizenShip" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TraineePhoto" Type="varbinary(max)" />
+    <Property Name="Remark" Type="ntext" />
+  </EntityType>
+  <EntityContainer Name="DriversTrainingManagementSystemDBModelStoreContainer">
+    <EntitySet Name="tblChoices" EntityType="Self.tblChoices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEducationStatus" EntityType="Self.tblEducationStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblExpense" EntityType="Self.tblExpense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblExpenseReason" EntityType="Self.tblExpenseReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLicenseRank" EntityType="Self.tblLicenseRank" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMark" EntityType="Self.tblMark" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaperMark" EntityType="Self.tblPaperMark" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaymentReason" EntityType="Self.tblPaymentReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblQuestion" EntityType="Self.tblQuestion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblQuestionType" EntityType="Self.tblQuestionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrainee" EntityType="Self.tblTrainee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTraineeDetail" EntityType="Self.tblTraineeDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTraineePayment" EntityType="Self.tblTraineePayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrainer" EntityType="Self.tblTrainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrainingType" EntityType="Self.tblTrainingType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_EvaluationReport" EntityType="Self.View_EvaluationReport" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_EvaluationReport].[ID] AS [ID], 
+    [View_EvaluationReport].[Fullname] AS [Fullname], 
+    [View_EvaluationReport].[ExamRound] AS [ExamRound], 
+    [View_EvaluationReport].[TotalQuestions] AS [TotalQuestions], 
+    [View_EvaluationReport].[TotalMark] AS [TotalMark], 
+    [View_EvaluationReport].[Age] AS [Age], 
+    [View_EvaluationReport].[Sex] AS [Sex], 
+    [View_EvaluationReport].[RegistrationDate] AS [RegistrationDate], 
+    [View_EvaluationReport].[Ketema] AS [Ketema], 
+    [View_EvaluationReport].[Woreda] AS [Woreda], 
+    [View_EvaluationReport].[Kebele] AS [Kebele], 
+    [View_EvaluationReport].[HouseNo] AS [HouseNo], 
+    [View_EvaluationReport].[PhoneNumber] AS [PhoneNumber], 
+    [View_EvaluationReport].[EducationStatus] AS [EducationStatus], 
+    [View_EvaluationReport].[CitizenShip] AS [CitizenShip], 
+    [View_EvaluationReport].[TraineePhoto] AS [TraineePhoto]
+    FROM [dbo].[View_EvaluationReport] AS [View_EvaluationReport]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_GradeReport" EntityType="Self.View_GradeReport" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_GradeReport].[ID] AS [ID], 
+    [View_GradeReport].[Fullname] AS [Fullname], 
+    [View_GradeReport].[Age] AS [Age], 
+    [View_GradeReport].[Sex] AS [Sex], 
+    [View_GradeReport].[RegistrationDate] AS [RegistrationDate], 
+    [View_GradeReport].[PhoneNumber] AS [PhoneNumber], 
+    [View_GradeReport].[ExamRound] AS [ExamRound], 
+    [View_GradeReport].[TotalMark] AS [TotalMark], 
+    [View_GradeReport].[TraineePhoto] AS [TraineePhoto]
+    FROM [dbo].[View_GradeReport] AS [View_GradeReport]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_Trainee" EntityType="Self.View_Trainee" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_Trainee].[ID] AS [ID], 
+    [View_Trainee].[Fullname] AS [Fullname], 
+    [View_Trainee].[PhoneNumber] AS [PhoneNumber], 
+    [View_Trainee].[Age] AS [Age], 
+    [View_Trainee].[RegistrationDate] AS [RegistrationDate], 
+    [View_Trainee].[Sex] AS [Sex], 
+    [View_Trainee].[Ketema] AS [Ketema], 
+    [View_Trainee].[Woreda] AS [Woreda], 
+    [View_Trainee].[Kebele] AS [Kebele], 
+    [View_Trainee].[HouseNo] AS [HouseNo], 
+    [View_Trainee].[EducationStatus] AS [EducationStatus], 
+    [View_Trainee].[CitizenShip] AS [CitizenShip], 
+    [View_Trainee].[TraineePhoto] AS [TraineePhoto], 
+    [View_Trainee].[Remark] AS [Remark]
+    FROM [dbo].[View_Trainee] AS [View_Trainee]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

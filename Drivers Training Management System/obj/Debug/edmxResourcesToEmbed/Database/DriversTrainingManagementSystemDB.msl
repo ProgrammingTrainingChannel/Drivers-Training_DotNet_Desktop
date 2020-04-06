@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DriversTrainingManagementSystemDBModelStoreContainer" CdmEntityContainer="DriversTrainingManagementSystemDBEntities">
+    <EntitySetMapping Name="tblEducationStatus">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblEducationStatu">
+        <MappingFragment StoreEntitySet="tblEducationStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblExpenses">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblExpense">
+        <MappingFragment StoreEntitySet="tblExpense">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PaidBy" ColumnName="PaidBy" />
+          <ScalarProperty Name="RecievedBy" ColumnName="RecievedBy" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblExpenseReasons">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblExpenseReason">
+        <MappingFragment StoreEntitySet="tblExpenseReason">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLicenseRanks">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblLicenseRank">
+        <MappingFragment StoreEntitySet="tblLicenseRank">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMarks">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblMark">
+        <MappingFragment StoreEntitySet="tblMark">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+          <ScalarProperty Name="ExamRound" ColumnName="ExamRound" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPaperMarks">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblPaperMark">
+        <MappingFragment StoreEntitySet="tblPaperMark">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+          <ScalarProperty Name="TrainerName" ColumnName="TrainerName" />
+          <ScalarProperty Name="ExamRound" ColumnName="ExamRound" />
+          <ScalarProperty Name="QuestionAmount" ColumnName="QuestionAmount" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPaymentReasons">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblPaymentReason">
+        <MappingFragment StoreEntitySet="tblPaymentReason">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblQuestionTypes">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblQuestionType">
+        <MappingFragment StoreEntitySet="tblQuestionType">
+          <ScalarProperty Name="LicenseCategrory" ColumnName="LicenseCategrory" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTraineeDetails">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblTraineeDetail">
+        <MappingFragment StoreEntitySet="tblTraineeDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+          <ScalarProperty Name="TrainingType" ColumnName="TrainingType" />
+          <ScalarProperty Name="TrainingBatch" ColumnName="TrainingBatch" />
+          <ScalarProperty Name="LicenseRank" ColumnName="LicenseRank" />
+          <ScalarProperty Name="EvaluationDate" ColumnName="EvaluationDate" />
+          <ScalarProperty Name="ClassStartDate" ColumnName="ClassStartDate" />
+          <ScalarProperty Name="ClassEndDate" ColumnName="ClassEndDate" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="TrainerName" ColumnName="TrainerName" />
+          <ScalarProperty Name="AmountToPay" ColumnName="AmountToPay" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTraineePayments">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblTraineePayment">
+        <MappingFragment StoreEntitySet="tblTraineePayment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="RecievedBy" ColumnName="RecievedBy" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainers">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblTrainer">
+        <MappingFragment StoreEntitySet="tblTrainer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainingTypes">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblTrainingType">
+        <MappingFragment StoreEntitySet="tblTrainingType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_EvaluationReport">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.View_EvaluationReport">
+        <MappingFragment StoreEntitySet="View_EvaluationReport">
+          <ScalarProperty Name="TraineePhoto" ColumnName="TraineePhoto" />
+          <ScalarProperty Name="CitizenShip" ColumnName="CitizenShip" />
+          <ScalarProperty Name="EducationStatus" ColumnName="EducationStatus" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+          <ScalarProperty Name="Kebele" ColumnName="Kebele" />
+          <ScalarProperty Name="Woreda" ColumnName="Woreda" />
+          <ScalarProperty Name="Ketema" ColumnName="Ketema" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="ExamRound" ColumnName="ExamRound" />
+          <ScalarProperty Name="TotalQuestions" ColumnName="TotalQuestions" />
+          <ScalarProperty Name="TotalMark" ColumnName="TotalMark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_GradeReport">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.View_GradeReport">
+        <MappingFragment StoreEntitySet="View_GradeReport">
+          <ScalarProperty Name="TraineePhoto" ColumnName="TraineePhoto" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ExamRound" ColumnName="ExamRound" />
+          <ScalarProperty Name="TotalMark" ColumnName="TotalMark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Trainee">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.View_Trainee">
+        <MappingFragment StoreEntitySet="View_Trainee">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="TraineePhoto" ColumnName="TraineePhoto" />
+          <ScalarProperty Name="CitizenShip" ColumnName="CitizenShip" />
+          <ScalarProperty Name="EducationStatus" ColumnName="EducationStatus" />
+          <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+          <ScalarProperty Name="Kebele" ColumnName="Kebele" />
+          <ScalarProperty Name="Woreda" ColumnName="Woreda" />
+          <ScalarProperty Name="Ketema" ColumnName="Ketema" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChoices">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblChoice">
+        <MappingFragment StoreEntitySet="tblChoices">
+          <ScalarProperty Name="IsAnswer" ColumnName="IsAnswer" />
+          <ScalarProperty Name="ChoiceTextAmharic" ColumnName="ChoiceTextAmharic" />
+          <ScalarProperty Name="ChoiceTextOromiffa" ColumnName="ChoiceTextOromiffa" />
+          <ScalarProperty Name="ChoicePicture" ColumnName="ChoicePicture" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblQuestions">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblQuestion">
+        <MappingFragment StoreEntitySet="tblQuestion">
+          <ScalarProperty Name="QuestionTextOromiffa" ColumnName="QuestionTextOromiffa" />
+          <ScalarProperty Name="QuestionTextAmharic" ColumnName="QuestionTextAmharic" />
+          <ScalarProperty Name="QuestionPicture" ColumnName="QuestionPicture" />
+          <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainees">
+      <EntityTypeMapping TypeName="DriversTrainingManagementSystemDBModel.tblTrainee">
+        <MappingFragment StoreEntitySet="tblTrainee">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CurrentPayment" ColumnName="CurrentPayment" />
+          <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+          <ScalarProperty Name="LicenseCategory" ColumnName="LicenseCategory" />
+          <ScalarProperty Name="TrainingRound" ColumnName="TrainingRound" />
+          <ScalarProperty Name="TraineePhoto" ColumnName="TraineePhoto" />
+          <ScalarProperty Name="CitizenShip" ColumnName="CitizenShip" />
+          <ScalarProperty Name="EducationStatus" ColumnName="EducationStatus" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+          <ScalarProperty Name="Kebele" ColumnName="Kebele" />
+          <ScalarProperty Name="Woreda" ColumnName="Woreda" />
+          <ScalarProperty Name="Ketema" ColumnName="Ketema" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
